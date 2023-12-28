@@ -1,0 +1,86 @@
+<div ngClass="box_shadow mb-4">
+    <div class="container bg-color">
+
+    <div class="row">
+        <div class="col-lg-8 mt-4"><h2>Properties</h2></div>
+            <div class="col-lg-4 col-md-4 col-sm-12 d-flex" >
+                <input class="form-control mt-4"  type="text" placeholder="Search hear" [(ngModel)]="searchBy">
+              </div>
+    </div>
+        <!-- product button and search bar code start  -->
+    <div class="row mt-2">
+        <div class="col-lg-8 col-md-6 col-sm-6">
+               
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+              <label class="btn " for="btnradio1" (click)="filterProduct('all')">ALL</label>
+            
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+              <label class="btn " for="btnradio2" (click)="filterProduct('popular')">Popular</label>
+            
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+              <label class="btn " for="btnradio3" (click)="filterProduct('new jersey')">NewJersey</label>
+      
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+              <label class="btn " for="btnradio4" (click)="filterProduct('colorado')">Colorado</label>
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+              <label class="btn " for="btnradio5" (click)="filterProduct('albama')">Albama</label>
+            </div>
+
+          </div>
+          </div>
+     <!-- product button and search bar code end  -->
+     </div>
+  
+     
+    
+    
+        
+
+    
+<!-- package cards starts---------------------------------------------- -->
+    <div class="container">
+        <div class="row mt-4" *ngFor="let propertie of filterPropertiesArray | slice:startIndex:endIndex">
+            <div class="col-lg-8 col-md-8 col-sm-8 mt-4"  >
+                <span ngClass="for" [ngStyle]="{'background-color':propertie.color}">{{propertie.for}}</span>
+                <h2 ngClass="name">{{propertie.name}}</h2> 
+                <span ngClass="location">{{propertie.location}}</span>
+                <span ngClass="price">{{propertie.price}}</span>
+                <span ngClass="priceSqft">{{propertie.priceSqft}}</span>
+                <a ngClass="link" href="">Check in detail</a>
+                <!-- <span>{{package.}}</span>   -->
+               </div>
+    
+               
+              <div class="col-lg-4 col-md-4 col-sm-4 mt-4">
+                <img ngClass="image" [src]="propertie.image" alt="">
+              </div> 
+
+              </div>
+              </div>                  
+     
+<!-- package cards ends---------------------------------------------- -->
+
+<!-- Pagination starts -------->
+<div class="container mt-4 mb-4">
+    <div class="row mb-4">
+      <div class="col">
+  
+        <nav aria-label="...">
+          <ul class="pagination pagination-md justify-content-end">
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" (click)="changePage(1)">1</a>
+            </li>
+            <li class="page-item"><a class="page-link"  (click)="changePage(2)">2</a></li>
+            <li class="page-item"><a class="page-link"  (click)="changePage(3)">3</a></li>
+          </ul>
+        </nav>
+  
+      </div>
+    </div>
+  </div>
+  <!-- pagination end -------->    
+
+</div>
+
+

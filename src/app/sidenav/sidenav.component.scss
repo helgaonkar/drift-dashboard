@@ -1,0 +1,35 @@
+.name {
+  font-weight: 600;
+  color: rgb(196, 197, 224);
+  display: block;
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+}
+
+ul {
+  font-weight: 500;
+  color: rgb(196, 197, 224);
+  justify-content: space-between;
+}
+
+li {
+  margin: 1.5rem 0 0 0;
+  list-style: none;
+}
+
+.li:hover {
+  color: rgb(251, 68, 132);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.li:active {
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.1rem;
+}
+
+mat-icon {
+  margin-right: 1rem;
+  margin-bottom: -0.3rem;
+}

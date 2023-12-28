@@ -1,0 +1,46 @@
+.box_shadow{
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 0.2rem;
+}
+
+.current_plan{
+    background-color: rgb(83,44,171);
+}
+
+.overflow{
+    overflow: hidden;
+    display: block;
+    height: 14rem;
+}
+
+.overflow:hover{
+    overflow-x: scroll;
+    scroll-margin:0;
+    scroll-padding:0;
+    scrollbar-width: 0.2rem;
+   
+}
+
+// .overflow::-webkit-scrollbar{
+//     width: 1rem;
+// }
+
+/* width */
+// ::-webkit-scrollbar {
+//   width: 0.2rem;
+// }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
